@@ -16,9 +16,9 @@ public class Marcher {
         marche.add(lieuActuelle);
 
         while (!lieuActuelle.equals(destination)) {
-            List<Rue> possibilite = carte.getAdjacences().get(destination);
+            List<Rue> possibilite = carte.getRues().stream().toList();
             Rue choixDeRue = possibilite.get(new Random().nextInt(possibilite.size()));
-            Lieu positionSuivante = choixDeRue.getArrivee();
+            Lieu positionSuivante = choixDeRue.getSecondeLieu();
 
             marche.add(positionSuivante);
             lieuActuelle = positionSuivante;

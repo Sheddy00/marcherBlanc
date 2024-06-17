@@ -7,6 +7,5 @@ import java.util.Map;
 
 @Getter
 public class Carte {
-    private Map<Lieu, List<Rue>> adjacences;
-
+    private List<Rue> rues;
 }
